@@ -31,22 +31,36 @@ class View(ft.UserControl):
         self._title = ft.Text("SCHELETRO ESAME", color="blue", size=24)
         self._page.controls.append(self._title)
 
-        # List View where the reply is printed
-        self.txt_result = ft.ListView(expand=1, spacing=10, padding=20, auto_scroll=True)
-        self._page.controls.append(self.txt_result)
-        self._page.update()
-
-        #ROW with some controls
         # text field for the name
-        self.txt_name = ft.TextField(
-            label="soglia",
+        self.txt_tifosi = ft.TextField(
+            label="Tifosi",
             width=200,
             hint_text="Soglia (s)"
         )
-        self.btn_count = ft.ElevatedButton(text="Conta", on_click=self._controller.handle_count)
-        row1 = ft.Row([self.txt_name, self.btn_countedges],
+        # DROPDOWN
+        self.ddyear = ft.Dropdown(label="Anno",width=200)
+        self.ddteam = ft.Dropdown(label="Squadra",width=200)
+
+        #BOTTONI
+        self.btn_graph = ft.ElevatedButton(text="Crea Grafo",width=200, on_click=self._controller.handle_graph)
+        self.btn_details = ft.ElevatedButton(text="Dettagli",width=200, on_click=self._controller.handle_details)
+        self.btn_simulation = ft.ElevatedButton(text="Simula tifosi",width=200, on_click=self._controller.handle_simulation)
+
+        #ROW with some controls
+        row1 = ft.Row([self.ddyear, self.btn_graph],
                       alignment=ft.MainAxisAlignment.CENTER)
         self._page.controls.append(row1)
+        row2 = ft.Row([self.ddteam, self.btn_details],
+                      alignment=ft.MainAxisAlignment.CENTER)
+        self._page.controls.append(row2)
+        row3 = ft.Row([self.txt_tifosi, self.btn_simulation],
+                      alignment=ft.MainAxisAlignment.CENTER)
+        self._page.controls.append(row3)
+
+        # List View where the reply is printed
+        self.txt_result = ft.ListView(expand=1, spacing=10, padding=20, auto_scroll=True)
+        self._page.controls.append(self.txt_result)
+        self.controller.fillDD()
         self._page.update()
     @property
     def controller(self):
