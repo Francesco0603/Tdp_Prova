@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="788b8d5e-2bad-4272-bfc5-bb4b2cd70675" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/model/teams.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Esame_tdp-prova.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Esame_tdp-prova.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="788b8d5e-2bad-4272-bfc5-bb4b2cd70675" name="Changes" comment="da finire">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/view.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/view.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/DAO.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/DAO.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/connector.cnf" beforeDir="false" afterPath="$PROJECT_DIR$/database/connector.cnf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/model.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,6 +93,19 @@
       <option name="presentableId" value="Default" />
       <updated>1719838213621</updated>
     </task>
+    <task id="LOCAL-00001" summary="da finire">
+      <option name="closed" value="true" />
+      <created>1719846618520</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1719846618520</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="da finire" />
+    <option name="LAST_COMMIT_MESSAGE" value="da finire" />
   </component>
 </project>

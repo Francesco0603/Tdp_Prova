@@ -24,5 +24,24 @@ class DAO():
         cursor.close()
         conn.close()
         return result
+    @staticmethod
+    def getGiocatori(codiceSquadra,y1,y2):
+        conn = DBConnect.get_connection()
+
+        result = []
+
+        cursor = conn.cursor(dictionary=True)
+        query = """select *
+                    from teams t
+                    order by t.name """
+
+        cursor.execute(query,(codiceSquadra,y1,y2))
+
+        for row in cursor:
+            result.append(row["peso"])
+
+        cursor.close()
+        conn.close()
+        return result
 
 
