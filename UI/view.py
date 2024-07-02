@@ -39,7 +39,7 @@ class View(ft.UserControl):
         #ROW with some controls
         # text field for the name
         self.txt_name = ft.TextField(
-            label="soglia",
+            label="ingegneri(n)",
             width=200,
             hint_text="Soglia (s)"
         )
