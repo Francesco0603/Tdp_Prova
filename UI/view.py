@@ -31,22 +31,39 @@ class View(ft.UserControl):
         self._title = ft.Text("SCHELETRO ESAME", color="blue", size=24)
         self._page.controls.append(self._title)
 
+        #ROW with some controls
+        # text field for the name
+        self.txt_anno = ft.TextField(
+            label="Anno",
+            width=200,
+        )
+        self.txt_giorni = ft.TextField(
+            label="xG",
+            width=200,
+        )
+        self.txt_t1 = ft.TextField(
+            label="T1",
+            width=200,
+        )
+        self.txt_alfa = ft.TextField(
+            label="Alfa",
+            width=200,
+        )
+        self.btn_grafo = ft.ElevatedButton(text="Crea Grafo", on_click=self._controller.handle_graph)
+        row1 = ft.Row([self.txt_anno],
+                      alignment=ft.MainAxisAlignment.CENTER)
+        self._page.controls.append(row1)
+        row2 = ft.Row([self.txt_giorni,self.btn_grafo],
+                      alignment=ft.MainAxisAlignment.CENTER)
+        self._page.controls.append(row2)
+        row3 = ft.Row([self.txt_t1],
+                      alignment=ft.MainAxisAlignment.CENTER)
+        self._page.controls.append(row3)
+
         # List View where the reply is printed
         self.txt_result = ft.ListView(expand=1, spacing=10, padding=20, auto_scroll=True)
         self._page.controls.append(self.txt_result)
-        self._page.update()
 
-        #ROW with some controls
-        # text field for the name
-        self.txt_name = ft.TextField(
-            label="soglia",
-            width=200,
-            hint_text="Soglia (s)"
-        )
-        self.btn_count = ft.ElevatedButton(text="Conta", on_click=self._controller.handle_count)
-        row1 = ft.Row([self.txt_name, self.btn_countedges],
-                      alignment=ft.MainAxisAlignment.CENTER)
-        self._page.controls.append(row1)
         self._page.update()
     @property
     def controller(self):
